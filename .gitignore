@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MVC_Lost_Found/obj
+/MVC_Lost_Found/bin/Debug/net6.0
+
+
+/.vs
+/MVC_Lost_Found/.vs
