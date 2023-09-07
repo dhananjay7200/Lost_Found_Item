@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var data = ViewData["username"] ;
+    var dataa = ViewData["userdata"] as IEnumerable<Item>;
+}
+
+<body>
+<h1>Welcome</h1>
+<h2>@data</h2>
+
+
+<input type="button" class="btn btn-primary" value="See all list" onclick="window.location='@Url.Action("UserProfile", "Userdetails")'" />
+
+    <table class="table table-dark table-sm">
+        <thead>
+        <td>Username</td>
+        <td>Phone Number</td>
+        <td>Item Description</td>
+        <td>Loction Description</td>
+        <td>Found Floor</td>
+        </thead>
+        <tbody>
+            @foreach (Item x in dataa)
+            {
+                <tr>
+                    <td>@x.Uname </td>
+                    <td>@x.UserContact</td>
+                    <td>@x.IteamDesc</td>
+                    <td>@x.LostLoctionDesc</td>
+                    <td>@x.FloorDetails</td>
+                    <td><input type="button" class="btn btn-danger" value="" onclick="window.location='@Url.Action("AddLostIteam", "Items")'" /></td>
+                </tr>
+            }
+        </tbody>
+
+
+    </table>
+</body>
+

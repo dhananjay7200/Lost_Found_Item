@@ -3,6 +3,17 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1>Welcome</h1>
+
+
+
+    <input type="button" class="btn btn-primary" value="Search Iteam on Floor" onclick="window.location='@Url.Action("SearchItemsByFloor", "Items")'" />
+
+    <input type="button" class="btn btn-primary" value="Add Found Iteam" onclick="window.location='@Url.Action("AddFoundIteam", "Items")'" />
+
+    <input type="button" class="btn btn-primary" value="Add Lost Iteam" onclick="window.location='@Url.Action("AddLostIteam", "Items")'" />
+
+    <input type="button" class="btn btn-primary" value="Profile" onclick="window.location='@Url.Action("UserProfiler", "Userdetails")'" />
+
+
 </div>

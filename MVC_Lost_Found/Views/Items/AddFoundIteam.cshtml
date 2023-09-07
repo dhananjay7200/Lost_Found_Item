@@ -1,0 +1,68 @@
+﻿@model MVC_Lost_Found.Models.Item
+
+@{
+    ViewData["Title"] = "AddFoundIteam";
+}
+
+<div class="text-center">
+   <h1>Add Item You Found</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddFoundIteam">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group">
+                <label>Username</label>
+                <input asp-for="Uname" class="form-control" />
+                <span asp-validation-for="Uname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Contact details</label>
+                    <input asp-for="UserContact" class="form-control" />
+                    <span asp-validation-for="UserContact" class="text-danger"></span>
+                
+            </div>
+            <div class="form-group">
+                <label>Item Description</label>
+                <input asp-for="IteamDesc" class="form-control" />
+                <span asp-validation-for="IteamDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Found Location Description</label>
+                <input asp-for="LostLoctionDesc" class="form-control" />
+                <span asp-validation-for="LostLoctionDesc" class="text-danger"></span>
+            </div>
+                <div class="form-group">
+                    <label>Floor Details</label>
+                    <select class="form-select" aria-label="Default select example" asp-for="FloorDetails">
+                        <option selected>Floor details</option>
+                        <option value="CT1-1">CT1-1</option>
+                        <option value="CT1-2">CT1-2</option>
+                        <option value="CT1-3">CT1-3</option>
+                        <option value="CT1-4">CT1-4</option>
+                        <option value="CT1-5">CT1-5</option>
+                        <option value="CT1-6">CT1-6</option>
+                        <option value="CT1-7">CT1-7</option>
+                        <option value="CT2-1">CT2-1</option>
+                        <option value="CT2-2">CT2-2</option>
+                        <option value="CT2-3">CT2-3</option>
+                        <option value="CT2-4">CT2-4</option>
+                        <option value="CT2-5">CT2-5</option>
+                        <option value="CT2-6">CT2-6</option>
+                        <option value="CT2-7">CT2-7</option>
+                    </select>
+                    <span asp-validation-for="FloorDetails" class="text-danger"></span>
+                </div>
+            <div class="form-group">
+                <input type="submit" value="Add Item" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+   </div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

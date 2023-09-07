@@ -6,7 +6,7 @@ using System.Security.Claims;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
-namespace mvc_core.Repository
+namespace MVC_Lost_Found.Repository
 {
     public class UserdetailsRepo : IUserdetails
     {
